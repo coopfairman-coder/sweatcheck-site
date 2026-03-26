@@ -617,19 +617,23 @@
         flex: 1;
         max-width: 360px;
         border-radius: 16px;
-        overflow: hidden;
+        overflow: visible;
         background: var(--bg);
         border: 1px solid var(--border);
+        text-align: center;
       }
       .team-photo {
-        width: 100%;
-        height: 280px;
+        width: 180px;
+        height: 180px;
         object-fit: cover;
-        object-position: center 30%;
+        object-position: center center;
         display: block;
+        border-radius: 50%;
+        margin: 28px auto 20px;
+        border: 3px solid var(--border);
       }
-      .photo-cooper { object-position: 45% 12%; }
-      .photo-kyle   { object-position: 50% 10%; }
+      
+      
       .team-content {
         padding: 24px 28px 28px;
         text-align: center;
