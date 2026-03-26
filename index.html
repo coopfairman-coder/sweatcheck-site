@@ -262,6 +262,9 @@
           forwards;
       }
       .hero-hashtag {
+        display: block;
+        text-align: center;
+        width: 100%;
         font-size: clamp(44px, 7vw, 72px);
         font-weight: 800;
         letter-spacing: -3px;
@@ -622,7 +625,7 @@
         width: 100%;
         height: 320px;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 20%;
         display: block;
       }
       .team-content {
@@ -937,10 +940,14 @@
       .final-hashtag {
         position: relative;
         z-index: 1;
-        font-size: clamp(48px, 8vw, 88px);
+        font-size: clamp(36px, 6vw, 72px);
         font-weight: 800;
         letter-spacing: -3px;
         line-height: 1;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        overflow: hidden;
+        padding: 0 24px;
         background: linear-gradient(90deg, #1d7fe8, #1565c8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
