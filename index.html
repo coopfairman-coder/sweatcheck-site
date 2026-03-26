@@ -31,10 +31,10 @@
         --text-primary: #0f172a;
         --text-secondary: #475569;
         --text-muted: #94a3b8;
-        --accent: #74c0fc;
-        --accent-deep: #3b82f6;
-        --accent-tint: rgba(116, 192, 252, 0.08);
-        --accent-border: rgba(116, 192, 252, 0.2);
+        --accent: #1d7fe8;
+        --accent-deep: #1565c8;
+        --accent-tint: rgba(29, 127, 232, 0.08);
+        --accent-border: rgba(29, 127, 232, 0.2);
         --gold: #f59e0b;
         --gold-tint: rgba(245, 158, 11, 0.08);
         --gold-border: rgba(245, 158, 11, 0.2);
@@ -204,7 +204,7 @@
         inset: 0;
         background-image: radial-gradient(
           circle,
-          rgba(116, 192, 252, 0.12) 1px,
+          rgba(29, 127, 232, 0.12) 1px,
           transparent 1px
         );
         background-size: 32px 32px;
@@ -221,9 +221,10 @@
         gap: 24px;
       }
       .hero-logo {
-        height: 96px;
+        height: 120px;
         width: auto;
-        filter: drop-shadow(0 8px 24px rgba(116, 192, 252, 0.2));
+        margin: 0 auto 24px;
+        filter: drop-shadow(0 8px 24px rgba(29, 127, 232, 0.2));
         opacity: 0;
         animation: hero-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms forwards;
       }
@@ -265,7 +266,7 @@
         font-weight: 800;
         letter-spacing: -3px;
         line-height: 1.05;
-        background: linear-gradient(90deg, var(--accent), var(--accent-deep));
+        background: linear-gradient(90deg, #1d7fe8, #1565c8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -349,7 +350,7 @@
 
       /* ─── SECTION COMMON ─── */
       section {
-        padding: 100px 24px;
+        padding: 80px 24px;
       }
       .section-inner {
         max-width: 1100px;
@@ -357,10 +358,21 @@
       }
       .section-header {
         text-align: center;
-        margin-bottom: 64px;
+        margin-bottom: 56px;
+      }
+      .section-eyebrow {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent-deep);
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--accent);
       }
       .section-heading {
-        font-size: clamp(32px, 5vw, 48px);
+        font-size: clamp(40px, 5vw, 64px);
         font-weight: 800;
         letter-spacing: -1.5px;
         color: var(--text-primary);
@@ -407,7 +419,7 @@
         background: linear-gradient(
           135deg,
           rgba(245, 158, 11, 0.15),
-          rgba(116, 192, 252, 0.15)
+          rgba(29, 127, 232, 0.15)
         );
         border: 2px solid var(--gold-border);
         display: flex;
@@ -497,7 +509,12 @@
 
       /* ─── FEATURES ─── */
       #features {
-        background: var(--bg);
+        background: linear-gradient(
+          180deg,
+          var(--bg) 0%,
+          rgba(29, 127, 232, 0.03) 50%,
+          var(--bg) 100%
+        );
       }
       .features-grid {
         display: grid;
@@ -584,10 +601,11 @@
       /* ─── TEAM ─── */
       #team {
         background: var(--surface);
+        border-bottom: 1px solid rgba(29, 127, 232, 0.12);
       }
       .team-grid {
         display: flex;
-        gap: 32px;
+        gap: 20px;
         justify-content: center;
         max-width: 800px;
         margin: 0 auto;
@@ -602,12 +620,14 @@
       }
       .team-photo {
         width: 100%;
-        height: 280px;
+        height: 320px;
         object-fit: cover;
+        object-position: center top;
         display: block;
       }
       .team-content {
         padding: 24px 28px 28px;
+        text-align: center;
       }
       .team-name {
         font-size: 28px;
@@ -632,7 +652,7 @@
 
       /* ─── AMBASSADOR ─── */
       #ambassador {
-        background: var(--bg);
+        background: #f8fafc;
       }
       .ambassador-inner {
         max-width: 1000px;
@@ -643,20 +663,23 @@
         align-items: start;
       }
       .amb-eyebrow {
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1.5px;
         color: var(--accent-deep);
         margin-bottom: 12px;
+        display: inline-block;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--accent);
       }
       .amb-heading {
-        font-size: clamp(28px, 4vw, 40px);
+        font-size: clamp(42px, 5vw, 64px);
         font-weight: 800;
-        letter-spacing: -1.5px;
+        letter-spacing: -2px;
         color: var(--text-primary);
         margin-bottom: 24px;
-        line-height: 1.1;
+        line-height: 1.05;
       }
       .amb-perks {
         list-style: none;
@@ -761,7 +784,7 @@
       /* ─── EQUITY TEAM ─── */
       #equity {
         background: var(--surface);
-        padding: 100px 24px;
+        padding: 80px 24px;
       }
       .equity-badge {
         display: inline-flex;
@@ -905,7 +928,7 @@
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(116, 192, 252, 0.15),
+          rgba(29, 127, 232, 0.15),
           transparent 70%
         );
         animation: radial-pulse 4s ease-in-out infinite;
@@ -918,7 +941,7 @@
         font-weight: 800;
         letter-spacing: -3px;
         line-height: 1;
-        background: linear-gradient(90deg, var(--accent), var(--accent-deep));
+        background: linear-gradient(90deg, #1d7fe8, #1565c8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -1361,10 +1384,12 @@
             <img src="cooper.jpg" alt="Cooper Fairman" class="team-photo" />
             <div class="team-content">
               <h3 class="team-name">Cooper Fairman</h3>
-              <p class="team-title">CEO &amp; Co-Founder</p>
+              <p class="team-title">CEO &amp; CO-FOUNDER</p>
               <p class="team-bio">
-                A high school athlete who never stopped training. He built the
-                platform he always wished existed.
+                Finance student at the University of Tennessee by day, builder
+                by obsession. Cooper has been training since high school and got
+                tired of watching gym culture get buried under lifestyle fluff —
+                so he built SweatCheck instead.
               </p>
             </div>
           </div>
@@ -1372,10 +1397,12 @@
             <img src="kyle.jpg" alt="Kyle Keener" class="team-photo" />
             <div class="team-content">
               <h3 class="team-name">Kyle Keener</h3>
-              <p class="team-title">COO &amp; Co-Founder</p>
+              <p class="team-title">COO &amp; CO-FOUNDER</p>
               <p class="team-bio">
-                Former D3 basketball player. Day-one co-founder. The competitive
-                DNA behind SweatCheck.
+                Kinesiology student at UTK and former D3 athlete who understands
+                fitness from the inside out. Kyle brings the operational grit
+                and competitive fire that keeps SweatCheck moving every single
+                day.
               </p>
             </div>
           </div>
